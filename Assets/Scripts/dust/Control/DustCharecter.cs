@@ -72,6 +72,9 @@ public class DustCharecter : MonoBehaviour {
 			Vector2 velocity = body.velocity;
 			Vector2 scale = body.transform.localScale;
 			List<Action> actions = controller.getActions ();
+			if (actions.Count != 0) {
+				body.simulated = true;
+			}
 			if (actions.Contains(Action.JUMP) && canjump) {
 				velocity.y = verticalMultiplier;
 				animator.SetTrigger ("Jump");
