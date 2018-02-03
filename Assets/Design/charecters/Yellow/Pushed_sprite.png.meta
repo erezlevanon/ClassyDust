@@ -1,0 +1,574 @@
+fileFormatVersion: 2
+guid: 2c0e3b1b176571741ad6e06d40a23827
+timeCreated: 1517409172
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Pushed_sprite_0
+    21300002: Pushed_sprite_1
+    21300004: Pushed_sprite_2
+    21300006: Pushed_sprite_3
+    21300008: Pushed_sprite_4
+    21300010: Pushed_sprite_5
+    21300012: Pushed_sprite_6
+    21300014: Pushed_sprite_7
+    21300016: Pushed_sprite_8
+    21300018: Pushed_sprite_9
+    21300020: Pushed_sprite_10
+    21300022: Pushed_sprite_11
+    21300024: Pushed_sprite_12
+    21300026: Pushed_sprite_13
+    21300028: Pushed_sprite_14
+    21300030: Pushed_sprite_15
+    21300032: Pushed_sprite_16
+    21300034: Pushed_sprite_17
+    21300036: Pushed_sprite_18
+    21300038: Pushed_sprite_19
+    21300040: Pushed_sprite_20
+    21300042: Pushed_sprite_21
+    21300044: Pushed_sprite_22
+    21300046: Pushed_sprite_23
+    21300048: Pushed_sprite_24
+    21300050: Pushed_sprite_25
+    21300052: Pushed_sprite_26
+    21300054: Pushed_sprite_27
+    21300056: Pushed_sprite_28
+    21300058: Pushed_sprite_29
+    21300060: Pushed_sprite_30
+    21300062: Pushed_sprite_31
+    21300064: Pushed_sprite_32
+    21300066: Pushed_sprite_33
+    21300068: Pushed_sprite_34
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Pushed_sprite_0
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 57
+        width: 5
+        height: 7
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pushed_sprite_1
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 56
+        width: 168
+        height: 171
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pushed_sprite_2
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 56
+        width: 214
+        height: 168
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pushed_sprite_3
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 54
+        width: 171
+        height: 198
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pushed_sprite_4
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 52
+        width: 191
+        height: 172
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pushed_sprite_5
+      rect:
+        serializedVersion: 2
+        x: 1266
+        y: 59
+        width: 174
+        height: 172
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pushed_sprite_6
+      rect:
+        serializedVersion: 2
+        x: 1568
+        y: 24
+        width: 172
+        height: 207
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pushed_sprite_7
+      rect:
+        serializedVersion: 2
+        x: 1850
+        y: 56
+        width: 192
+        height: 171
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pushed_sprite_8
+      rect:
+        serializedVersion: 2
+        x: 2150
+        y: 56
+        width: 192
+        height: 171
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pushed_sprite_9
+      rect:
+        serializedVersion: 2
+        x: 2450
+        y: 57
+        width: 6
+        height: 7
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pushed_sprite_10
+      rect:
+        serializedVersion: 2
+        x: 2472
+        y: 56
+        width: 170
+        height: 171
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pushed_sprite_11
+      rect:
+        serializedVersion: 2
+        x: 2749
+        y: 57
+        width: 6
+        height: 7
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pushed_sprite_12
+      rect:
+        serializedVersion: 2
+        x: 2772
+        y: 56
+        width: 170
+        height: 171
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pushed_sprite_13
+      rect:
+        serializedVersion: 2
+        x: 3049
+        y: 57
+        width: 6
+        height: 7
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pushed_sprite_14
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 56
+        width: 170
+        height: 171
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pushed_sprite_15
+      rect:
+        serializedVersion: 2
+        x: 3349
+        y: 57
+        width: 6
+        height: 7
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pushed_sprite_16
+      rect:
+        serializedVersion: 2
+        x: 3372
+        y: 56
+        width: 170
+        height: 171
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pushed_sprite_17
+      rect:
+        serializedVersion: 2
+        x: 3649
+        y: 57
+        width: 6
+        height: 7
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pushed_sprite_18
+      rect:
+        serializedVersion: 2
+        x: 3672
+        y: 56
+        width: 170
+        height: 171
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pushed_sprite_19
+      rect:
+        serializedVersion: 2
+        x: 3949
+        y: 57
+        width: 6
+        height: 7
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pushed_sprite_20
+      rect:
+        serializedVersion: 2
+        x: 3972
+        y: 56
+        width: 170
+        height: 171
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pushed_sprite_21
+      rect:
+        serializedVersion: 2
+        x: 4249
+        y: 56
+        width: 193
+        height: 171
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pushed_sprite_22
+      rect:
+        serializedVersion: 2
+        x: 4549
+        y: 56
+        width: 193
+        height: 171
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pushed_sprite_23
+      rect:
+        serializedVersion: 2
+        x: 4849
+        y: 56
+        width: 193
+        height: 171
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pushed_sprite_24
+      rect:
+        serializedVersion: 2
+        x: 5149
+        y: 57
+        width: 6
+        height: 7
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pushed_sprite_25
+      rect:
+        serializedVersion: 2
+        x: 5173
+        y: 56
+        width: 169
+        height: 171
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pushed_sprite_26
+      rect:
+        serializedVersion: 2
+        x: 5448
+        y: 57
+        width: 6
+        height: 7
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pushed_sprite_27
+      rect:
+        serializedVersion: 2
+        x: 5473
+        y: 56
+        width: 169
+        height: 171
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pushed_sprite_28
+      rect:
+        serializedVersion: 2
+        x: 5748
+        y: 57
+        width: 6
+        height: 7
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pushed_sprite_29
+      rect:
+        serializedVersion: 2
+        x: 5773
+        y: 56
+        width: 168
+        height: 171
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pushed_sprite_30
+      rect:
+        serializedVersion: 2
+        x: 6051
+        y: 56
+        width: 190
+        height: 171
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pushed_sprite_31
+      rect:
+        serializedVersion: 2
+        x: 6351
+        y: 56
+        width: 190
+        height: 171
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pushed_sprite_32
+      rect:
+        serializedVersion: 2
+        x: 6650
+        y: 57
+        width: 5
+        height: 7
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pushed_sprite_33
+      rect:
+        serializedVersion: 2
+        x: 6673
+        y: 56
+        width: 168
+        height: 171
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pushed_sprite_34
+      rect:
+        serializedVersion: 2
+        x: 1438
+        y: 43
+        width: 5
+        height: 5
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
