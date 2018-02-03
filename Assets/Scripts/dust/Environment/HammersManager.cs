@@ -54,7 +54,7 @@ namespace Dust
 
 		public void Play (){
 			playing = true;
-			sequencer = new MidiTrackSequencer (song.tracks [1], song.division, 131.0f);
+			sequencer = new MidiTrackSequencer (song.tracks [0], song.division, 131.0f);
 			ApplyMessages (sequencer.Start ());
 		}
 
