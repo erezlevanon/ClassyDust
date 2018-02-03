@@ -40,7 +40,6 @@ public class DustCharecter : MonoBehaviour {
 
 		public void resetValues()
 		{
-			Debug.Log ("reset in dust");
 			this.transform.position = initPosition;
 			body.simulated = false;
 			lastTurbo = Time.time;

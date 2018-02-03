@@ -38,7 +38,7 @@ namespace Dust
 			}
 			if (gameRunning) {
 				foreach (DustCharecter dust in dusts) {
-					if (!dust.IsAlive ()) {
+					if (!dust.IsAlive () && livingDusts.Contains(dust)) {
 						livingDusts.Remove (dust);
 					}
 				}
@@ -77,7 +77,6 @@ namespace Dust
 			gameRunning = false;
 			hammersManager.Stop ();
 			foreach (DustCharecter dust in dusts) {
-				Debug.Log ("YO");
 				dust.resetValues ();
 			}
 		}

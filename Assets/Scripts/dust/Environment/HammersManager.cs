@@ -8,6 +8,7 @@ namespace Dust
 	public class HammersManager : MonoBehaviour
 	{
 		[Header ("Song")]
+		public float speedRatio;
 		public TextAsset sourceMidiFile;
 
 		public List<Hammer> hammers;
@@ -77,7 +78,7 @@ namespace Dust
 		void Update ()
 		{
 			if (sequencer != null && sequencer.Playing && playing) {
-				ApplyMessages (sequencer.Advance (Time.deltaTime * 1.5f));
+				ApplyMessages (sequencer.Advance (Time.deltaTime * speedRatio));
 			}
 		}
 
