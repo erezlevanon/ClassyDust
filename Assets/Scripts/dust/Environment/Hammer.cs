@@ -42,29 +42,13 @@ namespace Dust
 		public AudioSource noteToPlay;
 
 
-		public float raise;
 
 		private Animator animator;
-		private float nextplay;
-		private bool shouldplay;
-		public float delay;
-
 
 		// Use this for initialization
 		void Start ()
 		{
 			animator = GetComponent<Animator> ();
-		}
-	
-		// Update is called once per frame
-		void Update ()
-		{
-			if (shouldplay) { 
-				if (Time.time >= nextplay && noteToPlay != null) {
-					//noteToPlay.Play();
-					//shouldplay = false;
-				}
-			}
 		}
 
 		public NOTE getNote() {
@@ -75,8 +59,6 @@ namespace Dust
 
 			if (animator != null) 
 				animator.SetTrigger ("Play");
-			//nextplay = Time.time + delay;
-			//shouldplay = true;
 		}
 	}
 }

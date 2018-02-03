@@ -18,14 +18,16 @@ public class DustCharecter : MonoBehaviour {
 		public float horizontalMultiplier;
 		public float turboMul;
 		public float turboCooldown;
+		public float pushDuration;
 
 		private float lastTurbo;
 
 		private bool alive;
 		private bool canjump;
 
-
 		private Animator animator;
+
+
 
 	// Use this for initialization
 	void Start () {
@@ -35,11 +37,19 @@ public class DustCharecter : MonoBehaviour {
 			facing = 1;
 			alive = true;
 			canjump = false;
+			lastTurbo = Time.time - pushDuration - 1f;
 
+	}
+
+	public bool IsPushing() {
+			return Time.time - lastTurbo < pushDuration;
 	}
 			
 	// Update is called once per frame
 	void FixedUpdate () {
+			if (!IsPushing ()) {
+				body.mass = 1f;
+			}
 			if (!alive)
 				return;
 			Vector2 velocity = body.velocity;
@@ -59,6 +69,7 @@ public class DustCharecter : MonoBehaviour {
 			if (actions.Contains(Action.PUSH) && Time.time - lastTurbo > turboCooldown) {
 				velocity.x = facing * turboMul;
 				lastTurbo = Time.time;
+				body.mass = 5f;
 				animator.SetTrigger ("Turbo");
 			}
 			body.velocity = velocity;
@@ -74,8 +85,17 @@ public class DustCharecter : MonoBehaviour {
 				GetComponent<SpriteRenderer> ().color = new Color (1f, 1f, 1f, 0.3f);
 				animator.SetTrigger ("Hit");
 				alive = false;
-			} else
-				canjump = true;
+			} 
+		}
+
+		void OnCollisionStay2D (Collision2D col) {
+			DustCharecter otherdust = col.gameObject.GetComponent<DustCharecter> ();
+			if (otherdust != null) {
+				if (otherdust.IsPushing ()) {
+					animator.SetTrigger ("Pushed");
+				}
+			}
+			canjump = true;
 		}
 }
 }
