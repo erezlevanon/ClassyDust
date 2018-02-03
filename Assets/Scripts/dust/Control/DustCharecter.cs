@@ -103,6 +103,8 @@ public class DustCharecter : MonoBehaviour {
 				die ();
 			} else if (col.gameObject.tag == "Ground") {
 				animator.SetTrigger ("Land");
+			} else if (col.gameObject.tag == "Teleport") {
+				body.transform.position = new Vector2 (Mathf.Sign(body.transform.position.x) * (-1f) * 23f + body.transform.position.x , body.transform.position.y);
 			}
 			canjump = true;
 		}
