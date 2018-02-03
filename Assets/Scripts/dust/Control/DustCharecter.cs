@@ -27,18 +27,36 @@ public class DustCharecter : MonoBehaviour {
 
 		private Animator animator;
 
-
+		public Vector2 initPosition;
 
 	// Use this for initialization
 	void Start () {
 			body = GetComponent<Rigidbody2D> ();
+			body.simulated = false;
+			initPosition = new Vector2(body.transform.position.x, body.transform.position.y);
 			animator = GetComponent<Animator> ();
+			resetValues ();
+	}
+
+		public void resetValues()
+		{
+			Debug.Log ("reset in dust");
+			this.transform.position = initPosition;
+			body.simulated = false;
 			lastTurbo = Time.time;
-			facing = 1;
+			facing = Random.value < 0.5 ? 1 : -1;
+			body.transform.localScale = new Vector2 (body.transform.localScale.x * facing, body.transform.localScale.y);
 			alive = true;
 			canjump = false;
 			lastTurbo = Time.time - pushDuration - 1f;
+			body.gravityScale = 15f;
+			GetComponent<Collider2D> ().enabled = true;
+			GetComponent<SpriteRenderer> ().color = new Color (1f, 1f, 1f, 1f);
+		}
 
+	public void startRound() {
+			body.velocity = new Vector2 ();
+			body.simulated = true;
 	}
 
 	public bool IsPushing() {
@@ -83,12 +101,7 @@ public class DustCharecter : MonoBehaviour {
 
 		void OnCollisionEnter2D (Collision2D col) {
 			if (col.gameObject.tag == "hammer") {
-				body.velocity = new Vector2 (0f, 0f);
-				body.gravityScale = 0.7f;
-				GetComponent<Collider2D> ().enabled = false;
-				GetComponent<SpriteRenderer> ().color = new Color (1f, 1f, 1f, 0.3f);
-				animator.SetTrigger ("Hit");
-				alive = false;
+				die ();
 			} else if (col.gameObject.tag == "Ground") {
 				animator.SetTrigger ("Land");
 			}
@@ -103,5 +116,19 @@ public class DustCharecter : MonoBehaviour {
 				}
 			}
 		}
+
+		public bool IsAlive() {
+			return alive;
+		}
+
+		public void die() {
+			body.velocity = new Vector2 (0f, 0f);
+			body.gravityScale = 0.7f;
+			GetComponent<Collider2D> ().enabled = false;
+			GetComponent<SpriteRenderer> ().color = new Color (1f, 1f, 1f, 0.3f);
+			animator.SetTrigger ("Hit");
+			alive = false;
+		}
+			
 }
 }

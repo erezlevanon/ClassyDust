@@ -15,6 +15,8 @@ namespace Dust
 		[Header ("Debug")]
 		public bool play_song;
 
+		private bool playing;
+
 		private Dictionary<Hammer.NOTE, Hammer> hammersDict_;
 		static private Dictionary<int, Hammer.NOTE> numToNote_ = new Dictionary<int, Hammer.NOTE>() {
 			{ 49, Hammer.NOTE._3Cs },
@@ -49,27 +51,32 @@ namespace Dust
 		MidiFileContainer song;
 		MidiTrackSequencer sequencer;
 
-		void ResetAndPlay ()
-		{
+		public void Play (){
+			playing = true;
 			sequencer = new MidiTrackSequencer (song.tracks [1], song.division, 131.0f);
 			ApplyMessages (sequencer.Start ());
 		}
 
+		public void Stop() {
+			playing = false;
+		}
+
+
 		// Use this for initialization
 		IEnumerator Start ()
 		{
+			playing = false;
 			hammersDict_ = new Dictionary<Hammer.NOTE, Hammer> ();
 			foreach (Hammer hammer in FindObjectsOfType<Hammer>()) {
 				hammersDict_ [hammer.getNote ()] = hammer;
 			}
 			song = MidiFileLoader.Load (sourceMidiFile.bytes);
 			yield return new WaitForSeconds (1.0f);
-			ResetAndPlay ();
 		}
 
 		void Update ()
 		{
-			if (sequencer != null && sequencer.Playing) {
+			if (sequencer != null && sequencer.Playing && playing) {
 				ApplyMessages (sequencer.Advance (Time.deltaTime * 1.5f));
 			}
 		}
