@@ -57,24 +57,28 @@ public class DustCharecter : MonoBehaviour {
 			List<Action> actions = controller.getActions ();
 			if (actions.Contains(Action.JUMP) && canjump) {
 				velocity.y = verticalMultiplier;
+				animator.SetTrigger ("Jump");
 				canjump = false;
 			}
-			if (actions.Contains(Action.RIGHT)) {
-				facing = 1;
-				velocity.x = horizontalMultiplier;
-			} else if (actions.Contains(Action.LEFT)) {
-				velocity.x = -horizontalMultiplier;
-				facing = -1;
-			} 
-			if (actions.Contains(Action.PUSH) && Time.time - lastTurbo > turboCooldown) {
-				velocity.x = facing * turboMul;
-				lastTurbo = Time.time;
-				body.mass = 5f;
-				animator.SetTrigger ("Turbo");
-			}
-			body.velocity = velocity;
-			scale.x = Mathf.Abs(scale.x) * facing;
-			body.transform.localScale = scale;
+			if (actions.Contains (Action.PUSH)) {
+				if (Time.time - lastTurbo > turboCooldown) {
+					velocity.x = facing * turboMul;
+					lastTurbo = Time.time;
+					body.mass = 5f;
+					animator.SetTrigger ("Turbo");
+				}
+				} else {
+					if (actions.Contains (Action.RIGHT)) {
+						facing = 1;
+						velocity.x = horizontalMultiplier;
+					} else if (actions.Contains (Action.LEFT)) {
+						velocity.x = -horizontalMultiplier;
+						facing = -1;
+					} 
+				}
+				body.velocity = velocity;
+				scale.x = Mathf.Abs (scale.x) * facing;
+				body.transform.localScale = scale;
 	}
 
 		void OnCollisionEnter2D (Collision2D col) {
@@ -85,7 +89,10 @@ public class DustCharecter : MonoBehaviour {
 				GetComponent<SpriteRenderer> ().color = new Color (1f, 1f, 1f, 0.3f);
 				animator.SetTrigger ("Hit");
 				alive = false;
-			} 
+			} else if (col.gameObject.tag == "Ground") {
+				animator.SetTrigger ("Land");
+			}
+			canjump = true;
 		}
 
 		void OnCollisionStay2D (Collision2D col) {
@@ -95,7 +102,6 @@ public class DustCharecter : MonoBehaviour {
 					animator.SetTrigger ("Pushed");
 				}
 			}
-			canjump = true;
 		}
 }
 }
