@@ -1,0 +1,434 @@
+fileFormatVersion: 2
+guid: 7233202fca3b52f4284521c86e92f265
+timeCreated: 1517775496
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: 24fpshammer_0
+    21300002: 24fpshammer_1
+    21300004: 24fpshammer_2
+    21300006: 24fpshammer_3
+    21300008: 24fpshammer_4
+    21300010: 24fpshammer_5
+    21300012: 24fpshammer_6
+    21300014: 24fpshammer_7
+    21300016: 24fpshammer_8
+    21300018: 24fpshammer_9
+    21300020: 24fpshammer_10
+    21300022: 24fpshammer_11
+    21300024: 24fpshammer_12
+    21300026: 24fpshammer_13
+    21300028: 24fpshammer_14
+    21300030: 24fpshammer_15
+    21300032: 24fpshammer_16
+    21300034: 24fpshammer_17
+    21300036: 24fpshammer_18
+    21300038: 24fpshammer_19
+    21300040: 24fpshammer_20
+    21300042: 24fpshammer_21
+    21300044: 24fpshammer_22
+    21300046: 24fpshammer_23
+    21300048: 24fpshammer_24
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 24fpshammer_0
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 1798
+        width: 56
+        height: 275
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: 24fpshammer_1
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 1798
+        width: 56
+        height: 274
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: 24fpshammer_2
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 1798
+        width: 55
+        height: 271
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: 24fpshammer_3
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 1798
+        width: 53
+        height: 265
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: 24fpshammer_4
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 1798
+        width: 52
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: 24fpshammer_5
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 1798
+        width: 49
+        height: 246
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: 24fpshammer_6
+      rect:
+        serializedVersion: 2
+        x: 951
+        y: 1798
+        width: 45
+        height: 230
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: 24fpshammer_7
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 1198
+        width: 44
+        height: 212
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: 24fpshammer_8
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 1198
+        width: 43
+        height: 191
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: 24fpshammer_9
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 1198
+        width: 42
+        height: 167
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: 24fpshammer_10
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 1198
+        width: 40
+        height: 140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: 24fpshammer_11
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 1198
+        width: 39
+        height: 111
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: 24fpshammer_12
+      rect:
+        serializedVersion: 2
+        x: 806
+        y: 1198
+        width: 38
+        height: 84
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: 24fpshammer_13
+      rect:
+        serializedVersion: 2
+        x: 956
+        y: 1198
+        width: 38
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: 24fpshammer_14
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 598
+        width: 35
+        height: 38
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: 24fpshammer_15
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 598
+        width: 35
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: 24fpshammer_16
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 598
+        width: 28
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: 24fpshammer_17
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 598
+        width: 25
+        height: 12
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: 24fpshammer_18
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 598
+        width: 62
+        height: 339
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: 24fpshammer_19
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 598
+        width: 81
+        height: 546
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: 24fpshammer_20
+      rect:
+        serializedVersion: 2
+        x: 937
+        y: 598
+        width: 73
+        height: 555
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: 24fpshammer_21
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 0
+        width: 78
+        height: 524
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: 24fpshammer_22
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 0
+        width: 75
+        height: 451
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: 24fpshammer_23
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 0
+        width: 56
+        height: 387
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: 24fpshammer_24
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 0
+        width: 55
+        height: 288
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
