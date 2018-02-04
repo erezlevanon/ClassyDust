@@ -9,7 +9,7 @@ namespace Dust
 	public class GameManager : MonoBehaviour
 	{
 
-		private enum States
+		public enum States
 		{
 			INTRO,
 			PRE_ROUND,
@@ -45,7 +45,7 @@ namespace Dust
 			gameRunning = false;
 			livingDusts = new List<DustCharecter> ();
 			livingDusts.AddRange (dusts);
-			curState = States.INTRO;
+			TransitionToIntro ();
 		}
 	
 		// Update is called once per frame
@@ -71,12 +71,16 @@ namespace Dust
 
 		void IntroUpdate ()
 		{
-			TransitionToPreRound ();
+			if (timeToReset < Time.time) {
+				UIMan.setState (States.INTRO, false);
+				TransitionToPreRound ();
+			}
 		}
 
 		void PreRoundUpdate ()
 		{
 			if (Input.GetKey (KeyCode.Space)) {
+				UIMan.setState (States.PRE_ROUND, false);
 				TransitionToRound ();
 			}
 		}
@@ -111,21 +115,27 @@ namespace Dust
 		}
 
 		void TransitionToIntro(){
+			Debug.Log ("Intro");
 			curState = States.INTRO;
+			UIMan.setState (States.INTRO, true);
+			timeToReset = Time.time + 3f;
 		}
 
 		void TransitionToPreRound(){
+			Debug.Log ("pre");
 			curState = States.PRE_ROUND;
 			timeToReset = 0f;
 			gameRunning = false;
 			hammersManager.Stop ();
-			UIMan.setPreRound (true);
+			UIMan.setState (States.PRE_ROUND, true);
 			foreach (DustCharecter dust in dusts) {
 				dust.resetValues ();
 			}
 		}
 
 		void TransitionToRound(){
+			Debug.Log ("round");
+
 			curState = States.ROUND;
 			livingDusts.Clear ();
 			livingDusts.AddRange (dusts);
@@ -133,11 +143,14 @@ namespace Dust
 			foreach (DustCharecter dust in dusts) {
 				dust.startRound ();
 			}
+			UIMan.setState (States.ROUND, true);
 			hammersManager.Play ();
-			UIMan.setPreRound (false);
 		}
 
 		void TransitionToWinning(){
+			Debug.Log ("won");
+
+			UIMan.setState (States.WINNING, true);
 			curState = States.WINNING;
 		}
 
