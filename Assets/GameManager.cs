@@ -11,6 +11,13 @@ namespace Dust
 	public class GameManager : MonoBehaviour
 	{
 
+		private enum States {
+			INTRO,
+			PRE_ROUND,
+			ROUND,
+			WINNING,
+		};
+
 		public HammersManager hammersManager;
 		public UIManager UIMan;
 
