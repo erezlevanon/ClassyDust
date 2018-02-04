@@ -19,21 +19,29 @@ namespace Dust
 
 		private States curState;
 
-		public HammersManager hammersManager;
+		[Header ("UI")]
 		public UIManager UIMan;
 
+		[Header ("Music")]
+		public HammersManager hammersManager;
+
+		[Header ("Dusts")]
 		public List<DustCharecter> dusts;
 
+		[Header ("Twicking")]
 		public float timeAfterWin;
 		private float timeToReset;
+		public int maxRounds;
 
 		private bool gameRunning;
+		private int curRound;
 
 		private List<DustCharecter> livingDusts;
 
 		// Use this for initialization
 		void Start ()
 		{
+			curRound = 0;
 			gameRunning = false;
 			livingDusts = new List<DustCharecter> ();
 			livingDusts.AddRange (dusts);
@@ -88,7 +96,12 @@ namespace Dust
 				}
 			} else {
 				if (timeToReset != 0 && Time.time > timeToReset) {
-					TransitionToPreRound ();
+					curRound++;
+					if (isGameOver ()) {
+						TransitionToWinning ();
+					} else {
+						TransitionToPreRound ();
+					}
 				}
 			}
 		}
@@ -126,6 +139,20 @@ namespace Dust
 
 		void TransitionToWinning(){
 			curState = States.WINNING;
+		}
+
+		bool isGameOver(){
+			if (curRound >= maxRounds)
+				return true;
+			List<int> Wins = new List<int>();
+			foreach (DustCharecter dc in dusts) {
+				Wins.Add (dc.getWins());
+			}
+			Wins.Sort ();
+			if (maxRounds - curRound + Wins[1] < Wins[0]){
+				return true;
+			}
+			return false;
 		}
 	}
 }

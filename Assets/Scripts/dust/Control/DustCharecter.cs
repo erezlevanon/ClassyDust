@@ -12,6 +12,7 @@ public class DustCharecter : MonoBehaviour {
 		private bool isJumping;
 		private long  isPushing;
 		private int facing;
+		private int wins;
 
 		[Header("Movement")]
 		public float verticalMultiplier;
@@ -39,6 +40,7 @@ public class DustCharecter : MonoBehaviour {
 			initPosition = new Vector2(body.transform.position.x, body.transform.position.y);
 			animator = GetComponent<Animator> ();
 			resetValues ();
+			wins = 0;
 	}
 
 		public void resetValues()
@@ -140,6 +142,14 @@ public class DustCharecter : MonoBehaviour {
 			GetComponent<SpriteRenderer> ().color = new Color (1f, 1f, 1f, 0.3f);
 			animator.SetTrigger ("Hit");
 			alive = false;
+		}
+
+		public void winRound(){
+			wins += 1;
+		}
+
+		public int getWins(){
+			return wins;
 		}
 			
 }
