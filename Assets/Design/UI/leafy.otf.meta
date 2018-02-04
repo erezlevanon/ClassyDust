@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: b61da1a14da26f4469f3b42dd2a07bf8
+timeCreated: 1517762474
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Leafy
+  fontNames:
+  - Leafy
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

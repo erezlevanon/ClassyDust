@@ -20,6 +20,9 @@ public class DustCharecter : MonoBehaviour {
 		public float turboCooldown;
 		public float pushDuration;
 
+		[Header("Debug")]
+		public bool invulnurable;
+
 		private float lastTurbo;
 
 		private bool alive;
@@ -106,8 +109,6 @@ public class DustCharecter : MonoBehaviour {
 				die ();
 			} else if (col.gameObject.tag == "Ground") {
 				animator.SetTrigger ("Land");
-			} else if (col.gameObject.tag == "Teleport") {
-				body.transform.position = new Vector2 (Mathf.Sign(body.transform.position.x) * (-1f) * 23f + body.transform.position.x , body.transform.position.y);
 			}
 			canjump = true;
 		}
@@ -121,11 +122,18 @@ public class DustCharecter : MonoBehaviour {
 			}
 		}
 
+		void OnTriggerEnter2D(Collider2D col) {
+			if (col.gameObject.tag == "Teleport") {
+				body.transform.position = new Vector2 (Mathf.Sign(body.transform.position.x) * (-1f) * 23f + body.transform.position.x , body.transform.position.y);
+			}
+		}
+
 		public bool IsAlive() {
 			return alive;
 		}
 
 		public void die() {
+			if (invulnurable) return;
 			body.velocity = new Vector2 (0f, 0f);
 			body.gravityScale = 0.7f;
 			GetComponent<Collider2D> ().enabled = false;

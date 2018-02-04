@@ -12,6 +12,7 @@ namespace Dust
 	{
 
 		public HammersManager hammersManager;
+		public UIManager UIMan;
 
 		public List<DustCharecter> dusts;
 
@@ -69,6 +70,7 @@ namespace Dust
 				dust.startRound ();
 			}
 			hammersManager.Play ();
+			UIMan.setDark (false);
 		}
 
 		void ResetValues ()
@@ -76,6 +78,7 @@ namespace Dust
 			timeToReset = 0f;
 			gameRunning = false;
 			hammersManager.Stop ();
+			UIMan.setDark (true);
 			foreach (DustCharecter dust in dusts) {
 				dust.resetValues ();
 			}
