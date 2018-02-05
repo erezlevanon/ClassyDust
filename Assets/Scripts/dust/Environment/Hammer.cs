@@ -7,7 +7,8 @@ namespace Dust
 	public class Hammer : MonoBehaviour
 	{
 
-		public enum NOTE {
+		public enum NOTE
+		{
 			_3Cs,
 			_3D,
 			_3Ds,
@@ -37,30 +38,52 @@ namespace Dust
 			_5Ds,
 		}
 
-
 		public NOTE note;
 		public AudioSource noteToPlay;
+		public AnimationClip clip;
 
-
+		private Queue<float> delayedNotes;
 
 		private Animator animator;
+		private float anim_length;
 
 		// Use this for initialization
 		void Start ()
 		{
+			delayedNotes = new Queue<float> ();
 			animator = GetComponent<Animator> ();
+			anim_length = clip.length;
 		}
 
-		public NOTE getNote() {
+		public void Update ()
+		{
+			if (delayedNotes.Count == 0) 
+				return;
+			if (animator != null && animator.GetCurrentAnimatorStateInfo (animator.GetLayerIndex ("Base Layer")).IsName ("idle")) {
+				float normalizedTime = (Time.time - delayedNotes.Dequeue ()) / anim_length;
+				animator.Play (clip.name,
+							   animator.GetLayerIndex ("Base Layer"),
+							   normalizedTime);
+			}
+				
+		}
+
+		public NOTE getNote ()
+		{
 			return note;
 		}
 
-		public void HitNote() {
-			if (animator != null) 
+		public void HitNote ()
+		{
+			if (animator != null && animator.GetCurrentAnimatorStateInfo (animator.GetLayerIndex ("Base Layer")).IsName ("idle")) {
 				animator.SetTrigger ("Play");
+			} else {
+				delayedNotes.Enqueue (Time.time);
+			}
 		}
 
-		public void playNote() {
+		public void playNote ()
+		{
 			noteToPlay.Play ();
 		}
 	}
