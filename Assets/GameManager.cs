@@ -30,17 +30,20 @@ namespace Dust
 		public List<DustCharecter> dusts;
 
 		[Header ("Twicking")]
-		public float timeAfterWin;
 		public int maxRounds;
+
+		[Header ("Timing")]
+		private float sharedTimer;
+		public float videoLoadDelay;
+		public float warningTime;
+		public float timeAfterWin;
 
 		[Header ("Debug")]
 		public bool skipIntro;
 
-		private float timeToReset;
-		private float videoLoadDelay;
-
 		private bool gameRunning;
 		private int curRound;
+		private bool showWarning;
 
 		private List<DustCharecter> livingDusts;
 
@@ -48,10 +51,7 @@ namespace Dust
 		void Start ()
 		{
 			Debug.Log ("START");
-			curRound = 0;
-			gameRunning = false;
 			livingDusts = new List<DustCharecter> ();
-			livingDusts.AddRange (dusts);
 			TransitionToIntro ();
 		}
 	
@@ -78,7 +78,7 @@ namespace Dust
 
 		void IntroUpdate ()
 		{
-			if (skipIntro || (!videoPlayer.isPlaying && Time.time > videoLoadDelay)) {
+			if (skipIntro || (!videoPlayer.isPlaying && Time.time > sharedTimer)) {
 				UIMan.setState (States.INTRO, false);
 				videoPlayer.enabled = false;
 				TransitionToPreRound ();
@@ -96,18 +96,26 @@ namespace Dust
 		void RoundUpdate ()
 		{
 			if (gameRunning) {
-				foreach (DustCharecter dust in dusts) {
-					if (!dust.IsAlive () && livingDusts.Contains (dust)) {
-						livingDusts.Remove (dust);
+				if (showWarning) {
+					if (Time.time >= sharedTimer) {
+						hammersManager.Play ();
+						UIMan.setState (States.ROUND, false);
+						showWarning = false;
+					}
+				} else {
+					foreach (DustCharecter dust in dusts) {
+						if (!dust.IsAlive () && livingDusts.Contains (dust)) {
+							livingDusts.Remove (dust);
+						}
+					}
+					if (livingDusts.Count <= 1) {
+						gameRunning = false;
+						hammersManager.Stop ();
+						sharedTimer = Time.time + timeAfterWin;
 					}
 				}
-				if (livingDusts.Count <= 1) {
-					gameRunning = false;
-					hammersManager.Stop ();
-					timeToReset = Time.time + timeAfterWin;
-				}
 			} else {
-				if (timeToReset != 0 && Time.time > timeToReset) {
+				if (sharedTimer != 0 && Time.time > sharedTimer) {
 					curRound++;
 					if (isGameOver ()) {
 						TransitionToWinning ();
@@ -129,11 +137,15 @@ namespace Dust
 		void TransitionToIntro(){
 			Debug.Log ("Intro");
 			curState = States.INTRO;
+			gameRunning = false;
+			livingDusts.Clear ();
+			livingDusts.AddRange (dusts);
 			curRound = 0;
+			showWarning = true;
 			UIMan.setState (States.INTRO, true);
 			if (videoPlayer != null && !skipIntro) {
 				videoPlayer.enabled = true;
-				videoLoadDelay = Time.time + 2f;
+				sharedTimer = Time.time + videoLoadDelay;
 				videoPlayer.Play ();
 			}
 		}
@@ -141,7 +153,7 @@ namespace Dust
 		void TransitionToPreRound(){
 			Debug.Log ("pre");
 			curState = States.PRE_ROUND;
-			timeToReset = 0f;
+			sharedTimer = 0f;
 			gameRunning = false;
 			hammersManager.Stop ();
 			UIMan.setState (States.PRE_ROUND, true);
@@ -161,8 +173,12 @@ namespace Dust
 			foreach (DustCharecter dust in dusts) {
 				dust.startRound ();
 			}
-			UIMan.setState (States.ROUND, true);
-			hammersManager.Play ();
+			if (!showWarning) {
+				hammersManager.Play ();
+			} else {
+				sharedTimer = Time.time + warningTime;
+				UIMan.setState (States.ROUND, true);
+			}
 		}
 
 		void TransitionToWinning(){

@@ -55,6 +55,7 @@ public class DustCharecter : MonoBehaviour {
 			facing = 1;
 			body.transform.localScale = new Vector2 (body.transform.localScale.x, body.transform.localScale.y);
 			alive = true;
+			wins = 0;
 			canjump = false;
 			lastTurbo = Time.time - pushDuration - 1f;
 			body.gravityScale = 15f;

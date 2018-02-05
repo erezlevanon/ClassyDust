@@ -56,9 +56,12 @@ namespace Dust
 		}
 
 		public void HitNote() {
-
 			if (animator != null) 
 				animator.SetTrigger ("Play");
+		}
+
+		public void playNote() {
+			noteToPlay.Play ();
 		}
 	}
 }
