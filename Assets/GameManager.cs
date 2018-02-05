@@ -78,6 +78,7 @@ namespace Dust
 		void IntroUpdate ()
 		{
 			if (skipIntro || (!videoPlayer.isPlaying && Time.time > videoLoadDelay)) {
+				UIMan.setState (States.INTRO, false);
 				videoPlayer.enabled = false;
 				TransitionToPreRound ();
 			}
@@ -127,6 +128,8 @@ namespace Dust
 		void TransitionToIntro(){
 			Debug.Log ("Intro");
 			curState = States.INTRO;
+			curRound = 0;
+			UIMan.setState (States.INTRO, true);
 			if (videoPlayer != null && !skipIntro) {
 				videoPlayer.enabled = true;
 				videoLoadDelay = Time.time + 2f;
@@ -141,6 +144,7 @@ namespace Dust
 			gameRunning = false;
 			hammersManager.Stop ();
 			UIMan.setState (States.PRE_ROUND, true);
+			UIMan.setRound (curRound+1);
 			foreach (DustCharecter dust in dusts) {
 				dust.resetValues ();
 			}

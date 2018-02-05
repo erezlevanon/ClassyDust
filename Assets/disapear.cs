@@ -12,6 +12,9 @@ namespace Dust
 			ON,
 			OFF,
 		}
+
+
+
 			
 		public abstract void toggle (bool value);
 	

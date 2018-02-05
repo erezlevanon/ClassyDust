@@ -18,6 +18,12 @@ namespace Dust
 		public List<pair> Round;
 		public List<pair> Winning;
 
+		public List<UnityEngine.UI.Text> rounds;
+
+		[Header("Tweaking")]
+		public Color roundOpcaityOn;
+		public Color roundOpacityOff;
+
 		private Dictionary<GameManager.States, List<pair>> states;
 
 		public void Start(){
@@ -39,6 +45,18 @@ namespace Dust
 					dis.disapear.toggle (!(dis.whenOn));
 				}
 			};
+		}
+
+		public void setRound(int round) {
+			if (round > 5 || round < 1)
+				return;
+			for(int i = 1; i <= rounds.Count ; i++){
+				if (i == round) {
+					rounds [i-1].color = roundOpcaityOn;
+				} else {
+					rounds [i-1].color = roundOpacityOff;
+				}
+			}
 		}
 	}
 }

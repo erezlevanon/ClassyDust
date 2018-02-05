@@ -43,11 +43,8 @@ namespace Dust
 			if (curState == goalState)
 				return;
 			if (goalState == State.ON) {
-				curColor.a = Mathf.Min (maxAlpha, curColor.a + delta);
-				if (curColor.a == maxAlpha) {
-					curState = State.ON;
-
-				}
+				curColor.a = maxAlpha;
+				curState = State.ON;
 			} else {
 				curColor.a = Mathf.Max (minAlpha, curColor.a - delta);
 				if (curColor.a == minAlpha) {
