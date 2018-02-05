@@ -47,6 +47,7 @@ namespace Dust
 		// Use this for initialization
 		void Start ()
 		{
+			Debug.Log ("START");
 			curRound = 0;
 			gameRunning = false;
 			livingDusts = new List<DustCharecter> ();
