@@ -48,8 +48,8 @@ public class DustCharecter : MonoBehaviour {
 			this.transform.position = initPosition;
 			body.simulated = false;
 			lastTurbo = Time.time;
-			facing = Random.value < 0.5 ? 1 : -1;
-			body.transform.localScale = new Vector2 (body.transform.localScale.x * facing, body.transform.localScale.y);
+			facing = 1;
+			body.transform.localScale = new Vector2 (body.transform.localScale.x, body.transform.localScale.y);
 			alive = true;
 			canjump = false;
 			lastTurbo = Time.time - pushDuration - 1f;
