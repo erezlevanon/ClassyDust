@@ -61,6 +61,8 @@ namespace Dust
 				return;
 			if (animator != null && animator.GetCurrentAnimatorStateInfo (animator.GetLayerIndex ("Base Layer")).IsName ("idle")) {
 				float normalizedTime = (Time.time - delayedNotes.Dequeue ()) / anim_length;
+				if (normalizedTime > 1f)
+					return;
 				animator.Play (clip.name,
 							   animator.GetLayerIndex ("Base Layer"),
 							   normalizedTime);

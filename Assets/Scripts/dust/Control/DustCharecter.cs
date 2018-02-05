@@ -33,6 +33,7 @@ public class DustCharecter : MonoBehaviour {
 		private bool canjump;
 
 		private Animator animator;
+		private SpriteRenderer sprite_renderer;
 
 		public Vector2 initPosition;
 
@@ -42,6 +43,7 @@ public class DustCharecter : MonoBehaviour {
 			body.simulated = false;
 			initPosition = new Vector2(body.transform.position.x, body.transform.position.y);
 			animator = GetComponent<Animator> ();
+			sprite_renderer = GetComponent<SpriteRenderer> (); 
 			resetValues ();
 			wins = 0;
 	}
@@ -50,6 +52,7 @@ public class DustCharecter : MonoBehaviour {
 		{
 			this.transform.position = initPosition;
 			uiArrows.SetActive(true);
+			sprite_renderer.sortingOrder = 0;
 			body.simulated = false;
 			lastTurbo = Time.time;
 			facing = 1;
@@ -66,6 +69,7 @@ public class DustCharecter : MonoBehaviour {
 	public void startRound() {
 			body.velocity = new Vector2 ();
 			body.simulated = true;
+			sprite_renderer.sortingOrder = 1;
 			uiArrows.SetActive(false);
 	}
 
@@ -84,8 +88,7 @@ public class DustCharecter : MonoBehaviour {
 			Vector2 scale = body.transform.localScale;
 			List<Action> actions = controller.getActions ();
 			if (actions.Count != 0) {
-				body.simulated = true;
-				uiArrows.SetActive(false);
+				startRound ();
 			}
 			if (actions.Contains(Action.JUMP) && canjump) {
 				velocity.y = verticalMultiplier;
@@ -157,6 +160,10 @@ public class DustCharecter : MonoBehaviour {
 
 		public int getWins(){
 			return wins;
+		}
+
+		public void wakeUp(){
+			
 		}
 			
 }
