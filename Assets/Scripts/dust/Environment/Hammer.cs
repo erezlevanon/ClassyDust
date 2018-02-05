@@ -57,7 +57,7 @@ namespace Dust
 
 		public void Update ()
 		{
-			if (delayedNotes.Count == 0) 
+			if (delayedNotes != null && delayedNotes.Count == 0) 
 				return;
 			if (animator != null && animator.GetCurrentAnimatorStateInfo (animator.GetLayerIndex ("Base Layer")).IsName ("idle")) {
 				float normalizedTime = (Time.time - delayedNotes.Dequeue ()) / anim_length;

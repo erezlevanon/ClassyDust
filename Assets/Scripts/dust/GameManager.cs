@@ -58,6 +58,10 @@ namespace Dust
 		// Update is called once per frame
 		void Update ()
 		{
+			if (Input.GetKey (KeyCode.Escape)) {
+				UnityEngine.SceneManagement.Scene scene = UnityEngine.SceneManagement.SceneManager.GetActiveScene ();
+				UnityEngine.SceneManagement.SceneManager.LoadScene (scene.name);
+			}
 			switch (curState) {
 			case States.INTRO:
 				IntroUpdate ();
@@ -112,6 +116,9 @@ namespace Dust
 						gameRunning = false;
 						hammersManager.Stop ();
 						sharedTimer = Time.time + timeAfterWin;
+						foreach (DustCharecter d in livingDusts) {
+							d.winRound ();
+						}
 					}
 				}
 			} else {
@@ -143,6 +150,10 @@ namespace Dust
 			curRound = 0;
 			showWarning = true;
 			UIMan.setState (States.INTRO, true);
+			foreach (DustCharecter dust in dusts) {
+				dust.resetWins ();
+				dust.showWins (false);
+			}
 			if (videoPlayer != null && !skipIntro) {
 				videoPlayer.enabled = true;
 				sharedTimer = Time.time + videoLoadDelay;
@@ -160,6 +171,7 @@ namespace Dust
 			UIMan.setRound (curRound+1);
 			foreach (DustCharecter dust in dusts) {
 				dust.resetValues ();
+				dust.showWins (false);
 			}
 		}
 
@@ -183,7 +195,11 @@ namespace Dust
 
 		void TransitionToWinning(){
 			Debug.Log ("won");
-
+			foreach (DustCharecter dust in dusts) {
+				dust.resetValues ();
+				dust.showArrows (false);
+				dust.showWins (true);
+			}
 			UIMan.setState (States.WINNING, true);
 			curState = States.WINNING;
 		}
