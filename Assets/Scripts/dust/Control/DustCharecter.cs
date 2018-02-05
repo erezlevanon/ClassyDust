@@ -21,6 +21,9 @@ public class DustCharecter : MonoBehaviour {
 		public float turboCooldown;
 		public float pushDuration;
 
+		[Header ("UI")]
+		public GameObject uiArrows;
+
 		[Header("Debug")]
 		public bool invulnurable;
 
@@ -46,6 +49,7 @@ public class DustCharecter : MonoBehaviour {
 		public void resetValues()
 		{
 			this.transform.position = initPosition;
+			uiArrows.SetActive(true);
 			body.simulated = false;
 			lastTurbo = Time.time;
 			facing = 1;
@@ -59,6 +63,7 @@ public class DustCharecter : MonoBehaviour {
 		}
 
 	public void startRound() {
+			Debug.Log (body.gameObject.name);
 			body.velocity = new Vector2 ();
 			body.simulated = true;
 	}
@@ -79,6 +84,7 @@ public class DustCharecter : MonoBehaviour {
 			List<Action> actions = controller.getActions ();
 			if (actions.Count != 0) {
 				body.simulated = true;
+				uiArrows.SetActive(false);
 			}
 			if (actions.Contains(Action.JUMP) && canjump) {
 				velocity.y = verticalMultiplier;
