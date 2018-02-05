@@ -31,8 +31,10 @@ namespace Dust
 
 		[Header ("Twicking")]
 		public float timeAfterWin;
-		private float timeToReset;
 		public int maxRounds;
+
+		private float timeToReset;
+		private float videoLoadDelay;
 
 		private bool gameRunning;
 		private int curRound;
@@ -72,7 +74,7 @@ namespace Dust
 
 		void IntroUpdate ()
 		{
-			if (!videoPlayer.isPlaying && Time.time > 1f) {
+			if (!videoPlayer.isPlaying && Time.time > videoLoadDelay) {
 				videoPlayer.enabled = false;
 				TransitionToPreRound ();
 			}
@@ -113,13 +115,18 @@ namespace Dust
 
 		void WinningUpdate ()
 		{
+			if (Input.GetKey (KeyCode.Space)) {
+				UIMan.setState (States.WINNING, false);
+				TransitionToIntro ();
+			}
 		}
 
 		void TransitionToIntro(){
 			Debug.Log ("Intro");
 			curState = States.INTRO;
 			if (videoPlayer != null) {
-				Debug.Log ("playvid");
+				videoPlayer.enabled = true;
+				videoLoadDelay = Time.time + 2f;
 				videoPlayer.Play ();
 			}
 		}
