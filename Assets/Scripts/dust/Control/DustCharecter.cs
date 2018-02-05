@@ -55,8 +55,10 @@ public class DustCharecter : MonoBehaviour {
 			sprite_renderer.sortingOrder = 0;
 			body.simulated = false;
 			lastTurbo = Time.time;
-			facing = 1;
-			body.transform.localScale = new Vector2 (body.transform.localScale.x, body.transform.localScale.y);
+			facing = Random.value < .5? 1 : -1;
+			if (facing == -1) {
+				sprite_renderer.flipX = true;
+			}
 			alive = true;
 			wins = 0;
 			canjump = false;
@@ -85,7 +87,6 @@ public class DustCharecter : MonoBehaviour {
 			if (!alive)
 				return;
 			Vector2 velocity = body.velocity;
-			Vector2 scale = body.transform.localScale;
 			List<Action> actions = controller.getActions ();
 			if (actions.Count != 0) {
 				startRound ();
@@ -112,8 +113,11 @@ public class DustCharecter : MonoBehaviour {
 					} 
 				}
 				body.velocity = velocity;
-				scale.x = Mathf.Abs (scale.x) * facing;
-				body.transform.localScale = scale;
+			if (facing == -1) {
+				sprite_renderer.flipX = true;
+			} else {
+				sprite_renderer.flipX = false;
+			}
 	}
 
 		void OnCollisionEnter2D (Collision2D col) {
