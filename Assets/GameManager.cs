@@ -21,6 +21,7 @@ namespace Dust
 
 		[Header ("UI")]
 		public UIManager UIMan;
+		public UnityEngine.Video.VideoPlayer videoPlayer;
 
 		[Header ("Music")]
 		public HammersManager hammersManager;
@@ -71,8 +72,8 @@ namespace Dust
 
 		void IntroUpdate ()
 		{
-			if (timeToReset < Time.time) {
-				UIMan.setState (States.INTRO, false);
+			if (!videoPlayer.isPlaying && Time.time > 1f) {
+				videoPlayer.enabled = false;
 				TransitionToPreRound ();
 			}
 		}
@@ -117,8 +118,10 @@ namespace Dust
 		void TransitionToIntro(){
 			Debug.Log ("Intro");
 			curState = States.INTRO;
-			UIMan.setState (States.INTRO, true);
-			timeToReset = Time.time + 3f;
+			if (videoPlayer != null) {
+				Debug.Log ("playvid");
+				videoPlayer.Play ();
+			}
 		}
 
 		void TransitionToPreRound(){
