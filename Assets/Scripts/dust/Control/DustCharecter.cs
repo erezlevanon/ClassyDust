@@ -63,9 +63,9 @@ public class DustCharecter : MonoBehaviour {
 		}
 
 	public void startRound() {
-			Debug.Log (body.gameObject.name);
 			body.velocity = new Vector2 ();
 			body.simulated = true;
+			uiArrows.SetActive(false);
 	}
 
 	public bool IsPushing() {

@@ -33,6 +33,9 @@ namespace Dust
 		public float timeAfterWin;
 		public int maxRounds;
 
+		[Header ("Debug")]
+		public bool skipIntro;
+
 		private float timeToReset;
 		private float videoLoadDelay;
 
@@ -74,7 +77,7 @@ namespace Dust
 
 		void IntroUpdate ()
 		{
-			if (!videoPlayer.isPlaying && Time.time > videoLoadDelay) {
+			if (skipIntro || (!videoPlayer.isPlaying && Time.time > videoLoadDelay)) {
 				videoPlayer.enabled = false;
 				TransitionToPreRound ();
 			}
@@ -124,7 +127,7 @@ namespace Dust
 		void TransitionToIntro(){
 			Debug.Log ("Intro");
 			curState = States.INTRO;
-			if (videoPlayer != null) {
+			if (videoPlayer != null && !skipIntro) {
 				videoPlayer.enabled = true;
 				videoLoadDelay = Time.time + 2f;
 				videoPlayer.Play ();
