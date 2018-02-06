@@ -35,15 +35,18 @@ namespace Dust
 		[Header ("Timing")]
 		private float sharedTimer;
 		public float videoLoadDelay;
+		public float timeAfterAllMoving;
 		public float warningTime;
 		public float timeAfterWin;
 
 		[Header ("Debug")]
 		public bool skipIntro;
 
+		// flags
 		private bool gameRunning;
 		private int curRound;
 		private bool showWarning;
+		private bool moveToRound;
 
 		private List<DustCharecter> livingDusts;
 
@@ -92,6 +95,20 @@ namespace Dust
 
 		void PreRoundUpdate ()
 		{
+			int moving = 0;
+			foreach (DustCharecter d in dusts) {
+				if (d.isMoving ())
+					moving++;
+			}
+			if (moving == dusts.Count) {
+				if (!moveToRound) {
+					moveToRound = true;
+					sharedTimer = Time.time + timeAfterAllMoving;
+				} else if (Time.time > sharedTimer) {
+					UIMan.setState (States.PRE_ROUND, false);
+					TransitionToRound ();
+				}
+			}
 			if (Input.GetKey (KeyCode.Space)) {
 				UIMan.setState (States.PRE_ROUND, false);
 				TransitionToRound ();
@@ -150,6 +167,7 @@ namespace Dust
 			livingDusts.AddRange (dusts);
 			curRound = 0;
 			showWarning = true;
+			moveToRound = false;
 			UIMan.setState (States.INTRO, true);
 			foreach (DustCharecter dust in dusts) {
 				dust.resetWins ();

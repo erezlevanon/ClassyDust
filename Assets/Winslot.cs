@@ -7,20 +7,16 @@ namespace Dust
 	public class Winslot : MonoBehaviour
 	{
 
+		[SerializeField]
 		private SpriteRenderer spriteRenderer;
 
 		[Header ("images")]
 		public Sprite winImage;
 		public Sprite loseImage;
 
-		public void Start() {
-			spriteRenderer = GetComponent<SpriteRenderer> ();
-
-		}
-
 		public void Set(bool win){
 			if (spriteRenderer == null)
-				return;
+				spriteRenderer = GetComponent<SpriteRenderer> ();
 			if (win) {
 				spriteRenderer.sprite = winImage;
 			} else {

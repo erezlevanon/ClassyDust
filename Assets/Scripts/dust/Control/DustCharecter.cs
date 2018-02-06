@@ -203,6 +203,10 @@ namespace Dust
 				winManager.Off ();
 			}
 		}
+
+		public bool isMoving() {
+			return body.simulated;
+		}
 			
 	}
 }
