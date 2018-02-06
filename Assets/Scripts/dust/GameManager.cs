@@ -54,7 +54,6 @@ namespace Dust
 		void Start ()
 		{
 			Debug.Log ("START");
-			Screen.SetResolution (1366, 768, true);
 			livingDusts = new List<DustCharecter> ();
 			TransitionToIntro ();
 		}
@@ -226,14 +225,6 @@ namespace Dust
 		bool isGameOver(){
 			if (curRound >= maxRounds)
 				return true;
-			List<int> Wins = new List<int>();
-			foreach (DustCharecter dc in dusts) {
-				Wins.Add (dc.getWins());
-			}
-			Wins.Sort ();
-			if (maxRounds - curRound + Wins[1] < Wins[0]){
-				return true;
-			}
 			return false;
 		}
 	}

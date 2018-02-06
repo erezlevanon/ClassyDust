@@ -161,7 +161,7 @@ namespace Dust
 		void OnTriggerEnter2D (Collider2D col)
 		{
 			if (col.gameObject.tag == "Teleport") {
-				body.transform.position = new Vector2 (Mathf.Sign (body.transform.position.x) * (-1f) * 23f + body.transform.position.x, body.transform.position.y);
+				body.transform.position = new Vector2 (Mathf.Sign (body.transform.position.x) * (-1f) * 20f + body.transform.position.x, body.transform.position.y);
 			}
 		}
 
