@@ -18,14 +18,16 @@ namespace Dust
 		};
 
 		private States curState;
+		private AudioSource audioPlayer;
 
 		[Header ("UI")]
 		public UIManager UIMan;
 		public UnityEngine.Video.VideoPlayer videoPlayer;
 		public BoxCollider2D podium;
 
-		[Header ("Music")]
+		[Header ("Music And Sound")]
 		public HammersManager hammersManager;
+		public AudioClip playOnIntroOver;
 
 		[Header ("Dusts")]
 		public List<DustCharecter> dusts;
@@ -35,10 +37,12 @@ namespace Dust
 
 		[Header ("Timing")]
 		private float sharedTimer;
+		private float sharedTimer_1;
 		public float videoLoadDelay;
 		public float timeAfterAllMoving;
 		public float warningTime;
 		public float timeAfterWin;
+		public float IntroClipDelay;
 
 		[Header ("Debug")]
 		public States entryState;
@@ -49,6 +53,7 @@ namespace Dust
 		private int curRound;
 		private bool showWarning;
 		private bool moveToRound;
+		private bool videoStarted;
 
 		private List<DustCharecter> livingDusts;
 
@@ -56,6 +61,7 @@ namespace Dust
 		void Start ()
 		{
 			livingDusts = new List<DustCharecter> ();
+			audioPlayer = GetComponent<AudioSource> ();
 			gameRunning = false;
 			livingDusts.Clear ();
 			livingDusts.AddRange (dusts);
@@ -123,6 +129,19 @@ namespace Dust
 				UIMan.setState (States.INTRO, false);
 				videoPlayer.enabled = false;
 				TransitionToPreRound ();
+				return;
+			}
+			if (!videoStarted) {
+				if (videoPlayer.frame > 1) {
+					videoStarted = true;
+					sharedTimer_1 = Time.time + IntroClipDelay;
+				}
+			} else {
+				if (Time.time > sharedTimer_1) {
+					audioPlayer.clip = playOnIntroOver;
+					audioPlayer.Play ();
+					sharedTimer_1 += 1000f;
+				}
 			}
 		}
 
@@ -197,6 +216,7 @@ namespace Dust
 			gameRunning = false;
 			livingDusts.Clear ();
 			livingDusts.AddRange (dusts);
+			videoStarted = false;
 			curRound = 0;
 			showWarning = true;
 			moveToRound = false;
