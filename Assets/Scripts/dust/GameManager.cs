@@ -51,6 +51,7 @@ namespace Dust
 		void Start ()
 		{
 			Debug.Log ("START");
+			Screen.SetResolution (1366, 768, true);
 			livingDusts = new List<DustCharecter> ();
 			TransitionToIntro ();
 		}
