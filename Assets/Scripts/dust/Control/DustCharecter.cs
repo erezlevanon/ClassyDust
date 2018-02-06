@@ -259,6 +259,18 @@ namespace Dust
 			this.body.constraints &= ~RigidbodyConstraints2D.FreezePositionX;
 			frozen = false;
 		}
+
+		public void winGame() {
+			triggerAnimation ("Win");
+		}
+
+		public void loseGame() {
+			triggerAnimation("Lose");
+		}
+
+		public void readyForEnding(){
+			setBoolAnimation ("Reset", false);
+		}
 			
 	}
 }

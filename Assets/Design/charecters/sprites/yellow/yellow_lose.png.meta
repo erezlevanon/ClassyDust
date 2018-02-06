@@ -1,0 +1,1652 @@
+fileFormatVersion: 2
+guid: 74a864fa670bc2c489b1ab1439522ef9
+timeCreated: 1517958565
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: yellow_lose_0
+    21300002: yellow_lose_1
+    21300004: yellow_lose_2
+    21300006: yellow_lose_3
+    21300008: yellow_lose_4
+    21300010: yellow_lose_5
+    21300012: yellow_lose_6
+    21300014: yellow_lose_7
+    21300016: yellow_lose_8
+    21300018: yellow_lose_9
+    21300020: yellow_lose_10
+    21300022: yellow_lose_11
+    21300024: yellow_lose_12
+    21300026: yellow_lose_13
+    21300028: yellow_lose_14
+    21300030: yellow_lose_15
+    21300032: yellow_lose_16
+    21300034: yellow_lose_17
+    21300036: yellow_lose_18
+    21300038: yellow_lose_19
+    21300040: yellow_lose_20
+    21300042: yellow_lose_21
+    21300044: yellow_lose_22
+    21300046: yellow_lose_23
+    21300048: yellow_lose_24
+    21300050: yellow_lose_25
+    21300052: yellow_lose_26
+    21300054: yellow_lose_27
+    21300056: yellow_lose_28
+    21300058: yellow_lose_29
+    21300060: yellow_lose_30
+    21300062: yellow_lose_31
+    21300064: yellow_lose_32
+    21300066: yellow_lose_33
+    21300068: yellow_lose_34
+    21300070: yellow_lose_35
+    21300072: yellow_lose_36
+    21300074: yellow_lose_37
+    21300076: yellow_lose_38
+    21300078: yellow_lose_39
+    21300080: yellow_lose_40
+    21300082: yellow_lose_41
+    21300084: yellow_lose_42
+    21300086: yellow_lose_43
+    21300088: yellow_lose_44
+    21300090: yellow_lose_45
+    21300092: yellow_lose_46
+    21300094: yellow_lose_47
+    21300096: yellow_lose_48
+    21300098: yellow_lose_49
+    21300100: yellow_lose_50
+    21300102: yellow_lose_51
+    21300104: yellow_lose_52
+    21300106: yellow_lose_53
+    21300108: yellow_lose_54
+    21300110: yellow_lose_55
+    21300112: yellow_lose_56
+    21300114: yellow_lose_57
+    21300116: yellow_lose_58
+    21300118: yellow_lose_59
+    21300120: yellow_lose_60
+    21300122: yellow_lose_61
+    21300124: yellow_lose_62
+    21300126: yellow_lose_63
+    21300128: yellow_lose_64
+    21300130: yellow_lose_65
+    21300132: yellow_lose_66
+    21300134: yellow_lose_67
+    21300136: yellow_lose_68
+    21300138: yellow_lose_69
+    21300140: yellow_lose_70
+    21300142: yellow_lose_71
+    21300144: yellow_lose_72
+    21300146: yellow_lose_73
+    21300148: yellow_lose_74
+    21300150: yellow_lose_75
+    21300152: yellow_lose_76
+    21300154: yellow_lose_77
+    21300156: yellow_lose_78
+    21300158: yellow_lose_79
+    21300160: yellow_lose_80
+    21300162: yellow_lose_81
+    21300164: yellow_lose_82
+    21300166: yellow_lose_83
+    21300168: yellow_lose_84
+    21300170: yellow_lose_85
+    21300172: yellow_lose_86
+    21300174: yellow_lose_87
+    21300176: yellow_lose_88
+    21300178: yellow_lose_89
+    21300180: yellow_lose_90
+    21300182: yellow_lose_91
+    21300184: yellow_lose_92
+    21300186: yellow_lose_93
+    21300188: yellow_lose_94
+    21300190: yellow_lose_95
+    21300192: yellow_lose_96
+    21300194: yellow_lose_97
+    21300196: yellow_lose_98
+    21300198: yellow_lose_99
+    21300200: yellow_lose_100
+    21300202: yellow_lose_101
+    21300204: yellow_lose_102
+    21300206: yellow_lose_103
+    21300208: yellow_lose_104
+    21300210: yellow_lose_105
+    21300212: yellow_lose_106
+    21300214: yellow_lose_107
+    21300216: yellow_lose_108
+    21300218: yellow_lose_109
+    21300220: yellow_lose_110
+    21300222: yellow_lose_111
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: yellow_lose_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7200
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_1
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 7200
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_2
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 7200
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_3
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 7200
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_4
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 7200
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_5
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 7200
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6800
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_7
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 6800
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_8
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 6800
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_9
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 6800
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_10
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 6800
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_11
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 6800
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6400
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_13
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 6400
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_14
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 6400
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_15
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 6400
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_16
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 6400
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_17
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 6400
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6000
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_19
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 6000
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_20
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 6000
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_21
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 6000
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_22
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 6000
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_23
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 6000
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5600
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_25
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 5600
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_26
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 5600
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_27
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 5600
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_28
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 5600
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_29
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 5600
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5200
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_31
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 5200
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_32
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 5200
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_33
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 5200
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_34
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 5200
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_35
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 5200
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4800
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_37
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 4800
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_38
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 4800
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_39
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 4800
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_40
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 4800
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_41
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 4800
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4400
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_43
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 4400
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_44
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 4400
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_45
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 4400
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_46
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 4400
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_47
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 4400
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4000
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_49
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 4000
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_50
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 4000
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_51
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 4000
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_52
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 4000
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_53
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 4000
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3600
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_55
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 3600
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_56
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 3600
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_57
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 3600
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_58
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 3600
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_59
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 3600
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3200
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_61
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 3200
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_62
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 3200
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_63
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 3200
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_64
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 3200
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_65
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 3200
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_66
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2800
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_67
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 2800
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_68
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 2800
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_69
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 2800
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_70
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 2800
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_71
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 2800
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2400
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_73
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 2400
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_74
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 2400
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_75
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 2400
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_76
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 2400
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_77
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 2400
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_78
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2000
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_79
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 2000
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_80
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 2000
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_81
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 2000
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_82
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 2000
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_83
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 2000
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_84
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1600
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_85
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1600
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_86
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1600
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_87
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 1600
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_88
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1600
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_89
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 1600
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_90
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1200
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_91
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1200
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_92
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1200
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_93
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 1200
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_94
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1200
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_95
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 1200
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_96
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 800
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_97
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 800
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_98
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 800
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_99
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 800
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_100
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 800
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_101
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 800
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_102
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 400
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_103
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 400
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_104
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 400
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_105
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 400
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_106
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 400
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_107
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 400
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_108
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_109
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 0
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_110
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 0
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: yellow_lose_111
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 0
+        width: 300
+        height: 400
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -268,9 +268,20 @@ namespace Dust
 		}
 
 		void TransitionToWinning(){
+			int maxwins = 0;
+			foreach (DustCharecter d in dusts) {
+				if (d.getWins () > maxwins)
+					maxwins = d.getWins ();
+			}
 			foreach (DustCharecter dust in dusts) {
 				dust.resetValues ();
 				dust.showArrows (false);
+				dust.readyForEnding ();
+				if (dust.getWins() == maxwins) {
+					dust.winGame ();
+				} else {
+					dust.loseGame ();
+				}
 				dust.showWins (true);
 				dust.freeze ();
 			}
