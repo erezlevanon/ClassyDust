@@ -17,6 +17,7 @@ namespace Dust
 		[SerializeField]
 		private int wins;
 		private WinSlotManager winManager;
+		private CharacterAudio audioManager;
 
 		[Header ("Movement")]
 		public float verticalMultiplier;
@@ -24,6 +25,7 @@ namespace Dust
 		public float turboMul;
 		public float turboCooldown;
 		public float pushDuration;
+
 
 		[Header ("UI")]
 		public GameObject uiArrows;
@@ -54,6 +56,7 @@ namespace Dust
 			animator = GetComponent<Animator> ();
 			sprite_renderer = GetComponent<SpriteRenderer> (); 
 			winManager = GetComponentInChildren<WinSlotManager> ();
+			audioManager = GetComponentInChildren<CharacterAudio> ();
 			resetValues ();
 			wins = 0;
 		}
@@ -92,6 +95,7 @@ namespace Dust
 			sprite_renderer.sortingOrder = 1;
 			uiArrows.SetActive (false);
 			winManager.Off ();
+			audioManager.play (CharacterAudio.Samples.ACTIVATED);
 		}
 
 		public bool IsPushing ()
@@ -121,6 +125,7 @@ namespace Dust
 			if (actions.Contains (Action.JUMP) && canjump) {
 				velocity.y = verticalMultiplier;
 				triggerAnimation ("Jump");
+				audioManager.play (CharacterAudio.Samples.JUMP);
 				canjump = false;
 			}
 			if (actions.Contains (Action.PUSH)) {
@@ -129,6 +134,7 @@ namespace Dust
 					lastTurbo = Time.time;
 					body.mass = 5f;
 					triggerAnimation ("Turbo");
+					audioManager.play (CharacterAudio.Samples.TURBO);
 				}
 			} else {
 				if (actions.Contains (Action.RIGHT)) {
@@ -153,6 +159,7 @@ namespace Dust
 				die ();
 			} else if (col.gameObject.tag == "Ground") {
 				triggerAnimation ("Land");
+				audioManager.play (CharacterAudio.Samples.LAND);
 			}
 			canjump = true;
 		}
@@ -163,6 +170,7 @@ namespace Dust
 			if (otherdust != null) {
 				if (otherdust.IsPushing ()) {
 					triggerAnimation ("Pushed");
+					audioManager.play (CharacterAudio.Samples.HIT);
 				}
 			}
 		}
@@ -188,6 +196,7 @@ namespace Dust
 			GetComponent<Collider2D> ().enabled = false;
 			GetComponent<SpriteRenderer> ().color = new Color (1f, 1f, 1f, 0.3f);
 			triggerAnimation ("Hit");
+			audioManager.play (CharacterAudio.Samples.CRUSHED);
 			alive = false;
 		}
 
