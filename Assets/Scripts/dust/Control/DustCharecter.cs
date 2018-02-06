@@ -162,6 +162,14 @@ namespace Dust
 			} else if (col.gameObject.tag == "Ground") {
 				triggerAnimation ("Land");
 				audioManager.play (CharacterAudio.Samples.LAND);
+			} else if (col.gameObject.tag == "Player") {
+				DustCharecter otherdust = col.gameObject.GetComponent<DustCharecter> ();
+				if (otherdust != null) {
+					if (otherdust.IsPushing ()) {
+						triggerAnimation ("Pushed");
+						audioManager.play (CharacterAudio.Samples.HIT);
+					}
+				}
 			}
 			canjump = true;
 		}
