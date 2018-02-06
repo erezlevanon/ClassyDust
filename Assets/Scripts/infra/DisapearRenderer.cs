@@ -24,10 +24,17 @@ namespace Dust
 		// Use this for initialization
 		void Start ()
 		{
-			curState = initState;
-			goalState = initState;
+			if (initState == State.ON) {
+				curState = State.ON;
+				goalState = State.ON;
+			} else {
+				curState = State.OFF;
+				goalState = State.OFF;
+			}
+
 			curColor = target.color;
-			if (goalState == State.ON) {
+
+			if (initState == State.ON) {
 				curColor.a = maxAlpha;
 			} else {
 				curColor.a = minAlpha;

@@ -35,6 +35,7 @@ namespace Dust
 
 		private bool alive;
 		private bool canjump;
+		private bool frozen;
 
 		private Animator animator;
 		private List<Animator> clone_animators;
@@ -109,8 +110,13 @@ namespace Dust
 			Vector2 velocity = body.velocity;
 			List<Action> actions = controller.getActions ();
 			if (actions.Count != 0 && !body.simulated) {
-				startRound ();
-				return;
+				if (!frozen) {
+					startRound ();
+					return;
+				} else {
+					body.simulated = true;
+					return;
+				}
 			}
 			if (actions.Contains (Action.JUMP) && canjump) {
 				velocity.y = verticalMultiplier;
@@ -216,6 +222,16 @@ namespace Dust
 			foreach (Animator a in clone_animators) {
 				a.SetTrigger (name);
 			}
+		}
+
+		public void freeze(){
+			this.body.constraints = this.body.constraints | RigidbodyConstraints2D.FreezePositionX;
+			frozen = true;
+		}
+
+		public void unfreeze() {
+			this.body.constraints &= ~RigidbodyConstraints2D.FreezePositionX;
+			frozen = false;
 		}
 			
 	}

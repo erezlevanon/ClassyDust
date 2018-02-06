@@ -22,6 +22,7 @@ namespace Dust
 		[Header ("UI")]
 		public UIManager UIMan;
 		public UnityEngine.Video.VideoPlayer videoPlayer;
+		public BoxCollider2D podium;
 
 		[Header ("Music")]
 		public HammersManager hammersManager;
@@ -65,12 +66,17 @@ namespace Dust
 				break;
 			case States.PRE_ROUND:
 				UIMan.setState (States.INTRO, false);
+				UIMan.setState (States.PRE_ROUND, false);
+				UIMan.setState (States.ROUND, false);
+				UIMan.setState (States.WINNING, false);
 				TransitionToPreRound ();
 				break;
 			case States.ROUND:
 				UIMan.setState (States.INTRO, false);
 				UIMan.setState (States.PRE_ROUND, false);
 				UIMan.setState (States.ROUND, false);
+				UIMan.setState (States.WINNING, false);
+
 				curRound = 1;
 				TransitionToRound ();
 				break;
@@ -194,10 +200,12 @@ namespace Dust
 			curRound = 0;
 			showWarning = true;
 			moveToRound = false;
+			podium.enabled = false;
 			UIMan.setState (States.INTRO, true);
 			foreach (DustCharecter dust in dusts) {
 				dust.resetWins ();
 				dust.showWins (false);
+				dust.freeze ();
 			}
 			if (videoPlayer != null && !skipIntro) {
 				videoPlayer.enabled = true;
@@ -210,11 +218,13 @@ namespace Dust
 			curState = States.PRE_ROUND;
 			sharedTimer = 0f;
 			gameRunning = false;
+			podium.enabled = false;
 			hammersManager.Stop ();
 			UIMan.setState (States.PRE_ROUND, true);
 			UIMan.setRound (curRound+1);
 			foreach (DustCharecter dust in dusts) {
 				dust.resetValues ();
+				dust.unfreeze ();
 				dust.showWins (false);
 			}
 		}
@@ -225,6 +235,7 @@ namespace Dust
 			livingDusts.Clear ();
 			livingDusts.AddRange (dusts);
 			gameRunning = true;
+			podium.enabled = false;
 			foreach (DustCharecter dust in dusts) {
 				dust.startRound ();
 			}
@@ -241,7 +252,9 @@ namespace Dust
 				dust.resetValues ();
 				dust.showArrows (false);
 				dust.showWins (true);
+				dust.freeze ();
 			}
+			podium.enabled = true;
 			UIMan.setState (States.WINNING, true);
 			curState = States.WINNING;
 		}
