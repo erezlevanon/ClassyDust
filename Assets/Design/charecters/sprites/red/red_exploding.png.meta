@@ -1,0 +1,266 @@
+fileFormatVersion: 2
+guid: 23540bf7ef803ff418bb1b3e21aa57fb
+timeCreated: 1517952477
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: red_exploding_0
+    21300002: red_exploding_1
+    21300004: red_exploding_2
+    21300006: red_exploding_3
+    21300008: red_exploding_4
+    21300010: red_exploding_5
+    21300012: red_exploding_6
+    21300014: red_exploding_7
+    21300016: red_exploding_8
+    21300018: red_exploding_9
+    21300020: red_exploding_10
+    21300022: red_exploding_11
+    21300024: red_exploding_12
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 9
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: red_exploding_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1236
+        width: 1165
+        height: 618
+      alignment: 9
+      pivot: {x: 0.47, y: 0.135}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: red_exploding_1
+      rect:
+        serializedVersion: 2
+        x: 1165
+        y: 1236
+        width: 1165
+        height: 618
+      alignment: 9
+      pivot: {x: 0.47, y: 0.135}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: red_exploding_2
+      rect:
+        serializedVersion: 2
+        x: 2330
+        y: 1236
+        width: 1165
+        height: 618
+      alignment: 9
+      pivot: {x: 0.47, y: 0.135}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: red_exploding_3
+      rect:
+        serializedVersion: 2
+        x: 3495
+        y: 1236
+        width: 1165
+        height: 618
+      alignment: 9
+      pivot: {x: 0.47, y: 0.135}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: red_exploding_4
+      rect:
+        serializedVersion: 2
+        x: 4660
+        y: 1236
+        width: 1165
+        height: 618
+      alignment: 9
+      pivot: {x: 0.47, y: 0.135}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: red_exploding_5
+      rect:
+        serializedVersion: 2
+        x: 5825
+        y: 1236
+        width: 1165
+        height: 618
+      alignment: 9
+      pivot: {x: 0.47, y: 0.135}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: red_exploding_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 618
+        width: 1165
+        height: 618
+      alignment: 9
+      pivot: {x: 0.47, y: 0.135}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: red_exploding_7
+      rect:
+        serializedVersion: 2
+        x: 1165
+        y: 618
+        width: 1165
+        height: 618
+      alignment: 9
+      pivot: {x: 0.47, y: 0.135}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: red_exploding_8
+      rect:
+        serializedVersion: 2
+        x: 2330
+        y: 618
+        width: 1165
+        height: 618
+      alignment: 9
+      pivot: {x: 0.47, y: 0.135}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: red_exploding_9
+      rect:
+        serializedVersion: 2
+        x: 3495
+        y: 618
+        width: 1165
+        height: 618
+      alignment: 9
+      pivot: {x: 0.47, y: 0.135}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: red_exploding_10
+      rect:
+        serializedVersion: 2
+        x: 4660
+        y: 618
+        width: 1165
+        height: 618
+      alignment: 9
+      pivot: {x: 0.47, y: 0.135}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: red_exploding_11
+      rect:
+        serializedVersion: 2
+        x: 5825
+        y: 618
+        width: 1165
+        height: 618
+      alignment: 9
+      pivot: {x: 0.47, y: 0.135}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: red_exploding_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1165
+        height: 618
+      alignment: 9
+      pivot: {x: 0.47, y: 0.135}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
