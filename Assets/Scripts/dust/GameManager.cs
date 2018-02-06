@@ -40,6 +40,7 @@ namespace Dust
 		public float timeAfterWin;
 
 		[Header ("Debug")]
+		public States entryState;
 		public bool skipIntro;
 
 		// flags
@@ -53,9 +54,36 @@ namespace Dust
 		// Use this for initialization
 		void Start ()
 		{
-			Debug.Log ("START");
 			livingDusts = new List<DustCharecter> ();
-			TransitionToIntro ();
+			gameRunning = false;
+			livingDusts.Clear ();
+			livingDusts.AddRange (dusts);
+			curRound = 0;
+			switch (entryState) {
+			case States.INTRO:
+				TransitionToIntro ();
+				break;
+			case States.PRE_ROUND:
+				UIMan.setState (States.INTRO, false);
+				TransitionToPreRound ();
+				break;
+			case States.ROUND:
+				UIMan.setState (States.INTRO, false);
+				UIMan.setState (States.PRE_ROUND, false);
+				UIMan.setState (States.ROUND, false);
+				curRound = 1;
+				TransitionToRound ();
+				break;
+			case States.WINNING:
+				UIMan.setState (States.INTRO, false);
+				UIMan.setState (States.PRE_ROUND, false);
+				UIMan.setState (States.ROUND, false);
+				TransitionToWinning ();
+				break;
+			default:
+				TransitionToIntro ();
+				break;
+			}
 		}
 	
 		// Update is called once per frame
@@ -159,7 +187,6 @@ namespace Dust
 		}
 
 		void TransitionToIntro(){
-			Debug.Log ("Intro");
 			curState = States.INTRO;
 			gameRunning = false;
 			livingDusts.Clear ();
@@ -180,7 +207,6 @@ namespace Dust
 		}
 
 		void TransitionToPreRound(){
-			Debug.Log ("pre");
 			curState = States.PRE_ROUND;
 			sharedTimer = 0f;
 			gameRunning = false;
@@ -194,7 +220,6 @@ namespace Dust
 		}
 
 		void TransitionToRound(){
-			Debug.Log ("round");
 
 			curState = States.ROUND;
 			livingDusts.Clear ();
@@ -212,7 +237,6 @@ namespace Dust
 		}
 
 		void TransitionToWinning(){
-			Debug.Log ("won");
 			foreach (DustCharecter dust in dusts) {
 				dust.resetValues ();
 				dust.showArrows (false);

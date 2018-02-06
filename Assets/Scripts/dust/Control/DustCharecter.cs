@@ -37,6 +37,7 @@ namespace Dust
 		private bool canjump;
 
 		private Animator animator;
+		private List<Animator> clone_animators;
 		private SpriteRenderer sprite_renderer;
 
 		public Vector2 initPosition;
@@ -45,6 +46,8 @@ namespace Dust
 		void Start ()
 		{
 			body = GetComponent<Rigidbody2D> ();
+			clone_animators = new List<Animator> ();
+			clone_animators.AddRange(GetComponentsInChildren<Animator> ()); 
 			body.simulated = false;
 			initPosition = new Vector2 (body.transform.position.x, body.transform.position.y);
 			animator = GetComponent<Animator> ();
@@ -111,7 +114,7 @@ namespace Dust
 			}
 			if (actions.Contains (Action.JUMP) && canjump) {
 				velocity.y = verticalMultiplier;
-				animator.SetTrigger ("Jump");
+				triggerAnimation ("Jump");
 				canjump = false;
 			}
 			if (actions.Contains (Action.PUSH)) {
@@ -119,7 +122,7 @@ namespace Dust
 					velocity.x = facing * turboMul;
 					lastTurbo = Time.time;
 					body.mass = 5f;
-					animator.SetTrigger ("Turbo");
+					triggerAnimation ("Turbo");
 				}
 			} else {
 				if (actions.Contains (Action.RIGHT)) {
@@ -143,7 +146,7 @@ namespace Dust
 			if (col.gameObject.tag == "hammer") {
 				die ();
 			} else if (col.gameObject.tag == "Ground") {
-				animator.SetTrigger ("Land");
+				triggerAnimation ("Land");
 			}
 			canjump = true;
 		}
@@ -153,7 +156,7 @@ namespace Dust
 			DustCharecter otherdust = col.gameObject.GetComponent<DustCharecter> ();
 			if (otherdust != null) {
 				if (otherdust.IsPushing ()) {
-					animator.SetTrigger ("Pushed");
+					triggerAnimation ("Pushed");
 				}
 			}
 		}
@@ -161,7 +164,7 @@ namespace Dust
 		void OnTriggerEnter2D (Collider2D col)
 		{
 			if (col.gameObject.tag == "Teleport") {
-				body.transform.position = new Vector2 (Mathf.Sign (body.transform.position.x) * (-1f) * 20f + body.transform.position.x, body.transform.position.y);
+				body.transform.position = new Vector2 (Mathf.Sign (body.transform.position.x) * (-1f) * 19f + body.transform.position.x, body.transform.position.y);
 			}
 		}
 
@@ -178,7 +181,7 @@ namespace Dust
 			body.gravityScale = 0.7f;
 			GetComponent<Collider2D> ().enabled = false;
 			GetComponent<SpriteRenderer> ().color = new Color (1f, 1f, 1f, 0.3f);
-			animator.SetTrigger ("Hit");
+			triggerAnimation ("Hit");
 			alive = false;
 		}
 
@@ -206,6 +209,13 @@ namespace Dust
 
 		public bool isMoving() {
 			return body.simulated;
+		}
+
+		private void triggerAnimation(string name) {
+			animator.SetTrigger (name);
+			foreach (Animator a in clone_animators) {
+				a.SetTrigger (name);
+			}
 		}
 			
 	}
