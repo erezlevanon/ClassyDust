@@ -78,6 +78,7 @@ namespace Dust
 			body.gravityScale = 15f;
 			GetComponent<Collider2D> ().enabled = true;
 			GetComponent<SpriteRenderer> ().color = new Color (1f, 1f, 1f, 1f);
+			setBoolAnimation ("Reset", true);
 			winManager.SetWins (wins);
 			winManager.On ();
 		}
@@ -93,6 +94,7 @@ namespace Dust
 			body.velocity = new Vector2 ();
 			body.simulated = true;
 			sprite_renderer.sortingOrder = 1;
+			setBoolAnimation ("Reset", false);
 			uiArrows.SetActive (false);
 			winManager.Off ();
 			audioManager.play (CharacterAudio.Samples.ACTIVATED);
@@ -192,9 +194,8 @@ namespace Dust
 			if (invulnurable)
 				return;
 			body.velocity = new Vector2 (0f, 0f);
-			body.gravityScale = 0.7f;
+			body.simulated = false;
 			GetComponent<Collider2D> ().enabled = false;
-			GetComponent<SpriteRenderer> ().color = new Color (1f, 1f, 1f, 0.3f);
 			triggerAnimation ("Hit");
 			audioManager.play (CharacterAudio.Samples.CRUSHED);
 			alive = false;
@@ -231,6 +232,14 @@ namespace Dust
 			foreach (Animator a in clone_animators) {
 				a.SetTrigger (name);
 			}
+		}
+
+		private void setBoolAnimation(string name, bool value) {
+			animator.SetBool (name, value);
+			foreach (Animator a in clone_animators) {
+				a.SetBool (name, value);
+			}
+
 		}
 
 		public void freeze(){
