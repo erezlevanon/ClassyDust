@@ -8,7 +8,7 @@ namespace Dust
 	public class DisapearRenderer : Disapear
 	{
 
-		public Renderer target;
+		public UnityEngine.UI.Image target;
 
 		public float maxAlpha;
 		public float minAlpha;
@@ -26,13 +26,13 @@ namespace Dust
 		{
 			curState = initState;
 			goalState = initState;
-			curColor = target.material.color;
+			curColor = target.color;
 			if (goalState == State.ON) {
 				curColor.a = maxAlpha;
 			} else {
 				curColor.a = minAlpha;
 			}
-			target.material.color = curColor;
+			target.color = curColor;
 		}
 
 
@@ -51,7 +51,7 @@ namespace Dust
 					curState = State.OFF;
 				}
 			}
-			target.material.color = curColor;
+			target.color = curColor;
 		}
 
 		override public void toggle (bool value)
