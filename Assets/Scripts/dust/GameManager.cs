@@ -30,6 +30,7 @@ namespace Dust
 		public AudioClip playOnIntroOver;
 		public AudioClip RoundStartFirst;
 		public AudioClip RoundStartRest;
+		public AudioClip EndSong;
 
 
 		[Header ("Dusts")]
@@ -141,6 +142,7 @@ namespace Dust
 				}
 			} else {
 				if (Time.time > sharedTimer_1) {
+					audioPlayer.volume = 0.2f;
 					audioPlayer.clip = playOnIntroOver;
 					audioPlayer.Play ();
 					sharedTimer_1 += 1000f;
@@ -162,6 +164,7 @@ namespace Dust
 				} else if (Time.time > sharedTimer) {
 					UIMan.setState (States.PRE_ROUND, false);
 					TransitionToRound ();
+					return;
 				}
 			}
 			if (Input.GetKey (KeyCode.Space)) {
@@ -179,6 +182,7 @@ namespace Dust
 						UIMan.setState (States.ROUND, false);
 						showWarning = false;
 					}
+					return;
 				} else {
 					foreach (DustCharecter dust in dusts) {
 						if (!dust.IsAlive () && livingDusts.Contains (dust)) {
@@ -208,13 +212,16 @@ namespace Dust
 
 		void WinningUpdate ()
 		{
+			
 			if (Input.GetKey (KeyCode.Space)) {
 				UIMan.setState (States.WINNING, false);
+				audioPlayer.Stop ();
 				TransitionToIntro ();
 			}
 		}
 
 		void TransitionToIntro(){
+			audioPlayer.Stop ();
 			curState = States.INTRO;
 			gameRunning = false;
 			livingDusts.Clear ();
@@ -263,14 +270,26 @@ namespace Dust
 				dust.startRound ();
 			}
 			if (!showWarning) {
+				audioPlayer.Stop ();
+				audioPlayer.volume = 1f;
+				audioPlayer.clip = RoundStartRest;
+				audioPlayer.Play ();
 				hammersManager.Play ();
 			} else {
 				sharedTimer = Time.time + warningTime;
+				audioPlayer.Stop ();
+				audioPlayer.volume = 1f;
+				audioPlayer.clip = RoundStartFirst;
+				audioPlayer.Play ();
 				UIMan.setState (States.ROUND, true);
 			}
 		}
 
 		void TransitionToWinning(){
+			audioPlayer.Stop ();
+			audioPlayer.volume = 0.5f;
+			audioPlayer.clip = EndSong;
+			audioPlayer.Play ();
 			int maxwins = 0;
 			foreach (DustCharecter d in dusts) {
 				if (d.getWins () > maxwins)
