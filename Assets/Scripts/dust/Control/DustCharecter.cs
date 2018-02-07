@@ -90,6 +90,8 @@ namespace Dust
 
 		public void startRound ()
 		{
+			if (frozen)
+				return;
 			winManager.On ();
 			body.velocity = new Vector2 ();
 			body.simulated = true;
@@ -112,6 +114,8 @@ namespace Dust
 				body.mass = 1f;
 			}
 			if (!alive)
+				return;
+			if (frozen)
 				return;
 			Vector2 velocity = body.velocity;
 			List<Action> actions = controller.getActions ();
