@@ -30,6 +30,7 @@ namespace Dust
 		public AudioClip playOnIntroOver;
 		public AudioClip RoundStartFirst;
 		public AudioClip RoundStartRest;
+		public AudioClip RoundEnd;
 		public AudioClip EndSong;
 
 
@@ -142,9 +143,7 @@ namespace Dust
 				}
 			} else {
 				if (Time.time > sharedTimer_1) {
-					audioPlayer.volume = 0.2f;
-					audioPlayer.clip = playOnIntroOver;
-					audioPlayer.Play ();
+					playSample (playOnIntroOver, 0.2f);
 					sharedTimer_1 += 1000f;
 				}
 			}
@@ -204,6 +203,7 @@ namespace Dust
 					if (isGameOver ()) {
 						TransitionToWinning ();
 					} else {
+						playSample (RoundEnd, 0.2f);
 						TransitionToPreRound ();
 					}
 				}
@@ -270,26 +270,17 @@ namespace Dust
 				dust.startRound ();
 			}
 			if (!showWarning) {
-				audioPlayer.Stop ();
-				audioPlayer.volume = 1f;
-				audioPlayer.clip = RoundStartRest;
-				audioPlayer.Play ();
+				playSample (RoundStartRest, 1f);
 				hammersManager.Play ();
 			} else {
 				sharedTimer = Time.time + warningTime;
-				audioPlayer.Stop ();
-				audioPlayer.volume = 1f;
-				audioPlayer.clip = RoundStartFirst;
-				audioPlayer.Play ();
+				playSample (RoundStartFirst, 1f);
 				UIMan.setState (States.ROUND, true);
 			}
 		}
 
 		void TransitionToWinning(){
-			audioPlayer.Stop ();
-			audioPlayer.volume = 0.5f;
-			audioPlayer.clip = EndSong;
-			audioPlayer.Play ();
+			playSample (EndSong, 0.5f);
 			int maxwins = 0;
 			foreach (DustCharecter d in dusts) {
 				if (d.getWins () > maxwins)
@@ -316,6 +307,13 @@ namespace Dust
 			if (curRound >= maxRounds)
 				return true;
 			return false;
+		}
+
+		private void playSample (AudioClip sample, float vol) {
+			audioPlayer.Stop ();
+			audioPlayer.volume = vol;
+			audioPlayer.clip = sample;
+			audioPlayer.Play ();
 		}
 	}
 }
