@@ -59,6 +59,16 @@ namespace Dust
 		public void play(Samples sample) {
 			if (!audioSource)
 				return;
+			if (audioSource.isPlaying) {
+				if (audioSource.clip.name == activated.name)
+					return;
+			}
+			reallyPlay (sample);
+		}
+
+		public void reallyPlay(Samples sample) {
+			if (!audioSource)
+				return;
 			if (audioSource.isPlaying)
 				audioSource.Stop ();
 			audioSource.clip = audioDict [sample];
