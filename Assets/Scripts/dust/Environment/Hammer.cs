@@ -36,6 +36,10 @@ namespace Dust
 			_5Cs,
 			_5D,
 			_5Ds,
+			CAUGHE,
+			BOO,
+			CLAPS,
+			APLAUSE,
 		}
 
 		public NOTE note;

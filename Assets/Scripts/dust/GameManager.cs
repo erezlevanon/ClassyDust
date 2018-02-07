@@ -28,6 +28,9 @@ namespace Dust
 		[Header ("Music And Sound")]
 		public HammersManager hammersManager;
 		public AudioClip playOnIntroOver;
+		public AudioClip RoundStartFirst;
+		public AudioClip RoundStartRest;
+
 
 		[Header ("Dusts")]
 		public List<DustCharecter> dusts;

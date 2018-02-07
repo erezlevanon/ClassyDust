@@ -10,9 +10,9 @@ namespace Dust
 		[Header ("Song")]
 		public float speedRatio;
 		public TextAsset sourceMidiFile;
-
-		public List<Hammer> hammers;
-
+		public int track;
+		public float bpm;
+	
 		[Header ("Debug")]
 		public bool play_song;
 
@@ -20,6 +20,10 @@ namespace Dust
 
 		private Dictionary<Hammer.NOTE, Hammer> hammersDict_;
 		static private Dictionary<int, Hammer.NOTE> numToNote_ = new Dictionary<int, Hammer.NOTE>() {
+			{ 40, Hammer.NOTE.CAUGHE},
+			{ 41, Hammer.NOTE.BOO},
+			{ 42, Hammer.NOTE.CLAPS},
+			{ 43, Hammer.NOTE.APLAUSE},
 			{ 49, Hammer.NOTE._3Cs },
 			{ 50, Hammer.NOTE._3D },
 			{ 51, Hammer.NOTE._3Ds },
@@ -54,7 +58,7 @@ namespace Dust
 
 		public void Play (){
 			playing = true;
-			sequencer = new MidiTrackSequencer (song.tracks [0], song.division, 131.0f);
+			sequencer = new MidiTrackSequencer (song.tracks [track], song.division, bpm);
 			ApplyMessages (sequencer.Start ());
 		}
 
@@ -91,6 +95,8 @@ namespace Dust
 							if (hammersDict_.ContainsKey (numToNote_ [m.data1])) {
 								hammersDict_ [numToNote_ [m.data1]].HitNote ();
 							}
+						} else {
+							Debug.Log (m.data1);
 						}
 					}
 				}
