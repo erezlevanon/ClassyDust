@@ -47,6 +47,7 @@ namespace Dust
 		public float timeAfterAllMoving;
 		public float warningTime;
 		public float timeAfterWin;
+		public float endSongDelay;
 		public float IntroClipDelay;
 
 		[Header ("Debug")]
@@ -59,6 +60,7 @@ namespace Dust
 		private bool showWarning;
 		private bool moveToRound;
 		private bool videoStarted;
+		private bool endsongflag;
 
 		private List<DustCharecter> livingDusts;
 
@@ -198,6 +200,10 @@ namespace Dust
 					}
 				}
 			} else {
+				if (endsongflag && Time.time > sharedTimer -endSongDelay) {
+					playSample (EndSong, 0.5f);
+					endsongflag = false;
+				}
 				if (sharedTimer != 0 && Time.time > sharedTimer) {
 					curRound++;
 					if (isGameOver ()) {
@@ -212,7 +218,6 @@ namespace Dust
 
 		void WinningUpdate ()
 		{
-			
 			if (Input.GetKey (KeyCode.Space)) {
 				UIMan.setState (States.WINNING, false);
 				audioPlayer.Stop ();
@@ -231,6 +236,7 @@ namespace Dust
 			showWarning = true;
 			moveToRound = false;
 			podium.enabled = false;
+			endsongflag = true;
 			UIMan.setState (States.INTRO, true);
 			foreach (DustCharecter dust in dusts) {
 				dust.resetWins ();
@@ -280,7 +286,7 @@ namespace Dust
 		}
 
 		void TransitionToWinning(){
-			playSample (EndSong, 0.5f);
+			UIMan.setRound (0);
 			int maxwins = 0;
 			foreach (DustCharecter d in dusts) {
 				if (d.getWins () > maxwins)

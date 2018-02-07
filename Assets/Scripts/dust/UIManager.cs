@@ -48,7 +48,7 @@ namespace Dust
 		}
 
 		public void setRound(int round) {
-			if (round > 5 || round < 1)
+			if (round > 5 || round < 0)
 				return;
 			for(int i = 1; i <= rounds.Count ; i++){
 				if (i == round) {
